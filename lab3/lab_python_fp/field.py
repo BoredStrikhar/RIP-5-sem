@@ -8,15 +8,14 @@
 
 def field(items, *args):
     assert len(args) > 0
-    numOfArgs = len(args)
     j = 0
     print('------------')
     for i in items:
         for key in i:
-            #while j < numOfArgs:
             if key == args[j]:
                 print(i[key])
-                j = j + 1
+                if j + 1 < len(args):
+                    j = j + 1
         j = 0
     print('------------')
     print()
