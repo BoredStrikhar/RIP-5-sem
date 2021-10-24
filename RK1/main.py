@@ -116,7 +116,7 @@ def main():
                     for o in operators if o.id == operator_id]
 
     print('Задание А1')
-    res_11 = sorted(one_to_many, key=itemgetter(2))
+    res_11 = sorted(one_to_many, key=itemgetter(3))
     print(res_11)
 
     print('\nЗадание А2')
@@ -138,7 +138,7 @@ def main():
     res_13 = {}
     # Перебираем все отделы
     for l in programming_languages:
-        if 'C++' in l.name:
+        if 'Java' in l.name:
             l_operators = list(filter(lambda i: i[2] == l.name, many_to_many))
             l_operators_names = [x for x, _, _ in l_operators]
             res_13[l.name] = l_operators_names
