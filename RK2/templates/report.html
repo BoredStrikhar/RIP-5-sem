@@ -1,0 +1,22 @@
+{% extends 'inc/base.html' %} {% load static %} {% block content %}
+<div class="container">
+    <h1 class="text-center mt-4">Report Page</h1>
+</div>
+<!-- Page Content -->
+<div>
+    <h1>Sorted Languages with Operators</h1>
+    {% for operator in sorted_operators %} {% include 'operator/operator_card.html' with operator=operator %} {% endfor %}
+</div>
+
+<div>
+    <h1>Sum of operands in Programming Language</h1>
+    <div class="d-flex flex-wrap">
+        {% for operands in num_of_operators %}
+        <div class="d-flex flex-column align-center" >
+            <h3 class="text-center">Number of operands {{ operands.num_of_operators }}</h3>
+            {% include 'prog_lang/prog_lang_card.html' with prog_lang=operands.prog_lang %}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}

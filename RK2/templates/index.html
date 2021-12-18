@@ -1,0 +1,20 @@
+{% extends 'inc/base.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="container">
+  <h1 class="text-center mt-4">Рубежный контроль №2</h1>
+</div>
+<!-- Page Content -->
+<div id="wrapper">
+  
+<div class="dust"><img src="http://www.mattdrew.co.uk/experiments/images/ex-2point5d/dust.png" /></div>
+
+<div class="foreground"><img src="{% static 'img/baza.jpeg' %}" /></div>
+
+<div class="midground"><img src="{% static 'img/baza.jpeg' %}" /></div>
+
+<div class="background"><img src="{% static 'img/baza.jpeg' %}" /></div>
+</div><!--wrapper-->
+{% endblock content %}

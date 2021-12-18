@@ -1,0 +1,13 @@
+{% load static %}
+
+<div class="card m-3" style="width: 18rem">
+    <img src="{% static 'img/lang.jpg' %}" class="card-img-top" alt="..." />
+    <div class="card-body">
+        <h5 class="card-title">{{ prog_lang.name }}</h5>
+        <p class="card-text">
+            Это язык программирования и он этому рад.
+        </p>
+        <a href="{% url 'delete_prog_lang' prog_lang.pk %}" class="btn btn-danger"> Delete </a>
+        <a href="{% url 'update_prog_lang' prog_lang.pk %}" class="btn btn-primary"> Update </a>
+    </div>
+</div>

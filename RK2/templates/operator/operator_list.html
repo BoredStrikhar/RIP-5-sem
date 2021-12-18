@@ -1,0 +1,9 @@
+{% extends 'inc/base.html' %} {% load static %} {% block content %}
+<div class="container">
+    <h1 class="text-center mt-4">All operators</h1>
+</div>
+<!-- Page Content -->
+<div class="d-flex flex-column">
+    {% for operator in operators %} {% include 'operator/operator_card.html' with operator=operator %} {% endfor %}
+</div>
+{% endblock content %}

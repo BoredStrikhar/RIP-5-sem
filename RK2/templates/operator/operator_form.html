@@ -1,0 +1,26 @@
+<div class="mb-3">
+    <label for="operatorName" class="form-label">operator Name</label>
+    <input type="text" name="name" value="{{ operator.name }}" required="required" class="form-control"
+        id="operatorName" />
+</div>
+
+<div class="mb-3">
+    <label for="operatorSyntax" class="form-label">operator Syntax</label>
+    <input type="text" name="syntax" value="{{ operator.syntax }}" required="required" class="form-control"
+        id="operatorSyntax" />
+</div>
+
+<div class="mb-3">
+    <label for="numOfOperands" class="form-label">numOfOperands</label>
+    <input type="number" min="0" name="num_of_operands" value="{{ operator.num_of_operands }}" required="required" class="form-control"
+        id="numOfOperands" />
+</div>
+
+<div class="mb-3">
+    <label for="progLang" class="form-label">Select Programming Language</label>
+    <select name="prog_lang" class="form-select" aria-label="Default select example" id="progLang">
+        {% for prog_lang in prog_langs %}
+        <option value="{{ prog_lang.pk }}">{{ prog_lang.name }}</option>
+        {% endfor %}
+    </select>
+</div>

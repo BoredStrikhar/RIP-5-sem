@@ -1,0 +1,25 @@
+{% load static %}
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark p-3">
+    <a class="navbar-brand ml-5" href="{% url 'main' %}">Strikhar</a>
+
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a href="{% url 'main' %}" class="nav-link">Main Page</a>
+        </li>
+        <li class="nav-item">
+            <a href="{% url 'read_operator' %}" class="nav-link">All operators</a>
+        </li>
+        <li class="nav-item">
+            <a href="{% url 'create_operator' %}" class="nav-link">Create operator</a>
+        </li>
+        <li class="nav-item">
+            <a href="{% url 'read_prog_lang' %}" class="nav-link">All prog_langs</a>
+        </li>
+        <li class="nav-item">
+            <a href="{% url 'create_prog_lang' %}" class="nav-link">Create prog_lang</a>
+        </li>
+        <li class="nav-item">
+            <a href="{% url 'report' %}" class="nav-link">Report</a>
+        </li>
+    </ul>
+</nav>

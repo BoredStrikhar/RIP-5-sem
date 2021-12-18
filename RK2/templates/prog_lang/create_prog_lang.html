@@ -1,0 +1,12 @@
+{% extends 'inc/base.html' %} {% load static %} {% block content %}
+<div class="container">
+    <h1 class="text-center mt-4">New prog_lang</h1>
+</div>
+<!-- Page Content -->
+<div>
+    <form action="{% url 'create_prog_lang' %}" method="POST" class="form">
+        {% csrf_token %} {% include 'prog_lang/prog_lang_form.html' with prog_lang=prog_lang %}
+        <button type="submit" class="btn btn-primary">Create</button>
+    </form>
+</div>
+{% endblock content %}
