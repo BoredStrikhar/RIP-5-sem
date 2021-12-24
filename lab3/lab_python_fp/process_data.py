@@ -5,7 +5,7 @@ from print_result import print_result
 from gen_random import gen_random
 # Сделаем другие необходимые импорты
 
-path = '.\data_light.json'
+path = './data_light.json'
 
 # Необходимо в переменную path сохранить путь к файлу, который был передан при запуске сценария
 

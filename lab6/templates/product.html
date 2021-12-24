@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="productTagWrapper">
+        <span class="productTag">Продукт № {{ data.product.id }}</span>
+        <span class="productTag">Название: {{ data.product.name }}</span>
+        <span class="productTag">Количество в наличии: {{ data.product.quantity }}</span>
+        <span class="productTag">Производитель: {{ data.product.manufacturer }}</span>
+        <span class="productTag">Вес: {{ data.product.weight }} г.</span>
+        <span class="productTag">Срок годности: {{ data.product.expiration_date }}</span>
+        <span class="productTag">Описание: {{ data.product.description }}</span>
+    </div>
+{% endblock %}
